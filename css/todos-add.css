@@ -5,6 +5,9 @@
 }
 
 .todo-add_select-all {
+	background: url("../img/select-all.png") no-repeat;
+	width: 24px;
+	height: 12px;
 	padding: 0;
 	background-color: transparent;
 	border: none;

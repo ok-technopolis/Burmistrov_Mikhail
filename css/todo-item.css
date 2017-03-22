@@ -40,19 +40,22 @@
 }
 
 .todo-item_ready-mark:checked + .todo-item_ready-mark-check {
-    background:url("../img/completed.png") no-repeat;
+    background: url("../img/completed.png") no-repeat;
+	width: 20px;
+	height: 20px;
 	position: absolute;
 	top: 50%;
 	left: 20px;
 	margin-top: -8px;
-    height: 20px;
-    width: 20px;
-    display:inline-block;
+    display: inline-block;
 	cursor: pointer;
 	z-index: 1;
 }
 
 .todo-item_remove {
+	background: url("../img/close.png") no-repeat;
+	width: 18px;
+	height: 18px;
 	padding: 0;
 	background-color: transparent;
 	border: none;
