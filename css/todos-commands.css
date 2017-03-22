@@ -1,0 +1,13 @@
+.todos-commands {
+	float: right;
+	
+	order: 50;
+}
+
+.todos-command {
+	background-color: transparent;
+	border: none;
+	color: #888888;
+	cursor: pointer;
+	outline: none;
+}

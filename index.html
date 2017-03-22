@@ -2,6 +2,17 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/fonts.css">
+		<link rel="stylesheet" href="css/general.css">
+		<link rel="stylesheet" href="css/todos-title.css">
+		<link rel="stylesheet" href="css/todos-main.css">
+		<link rel="stylesheet" href="css/todos-add.css">
+		<link rel="stylesheet" href="css/todos-list.css">
+		<link rel="stylesheet" href="css/todo-item.css">
+		<link rel="stylesheet" href="css/todos-actions.css">
+		<link rel="stylesheet" href="css/todos-filters.css">
+		<link rel="stylesheet" href="css/todos-commands.css">
+		<link rel="stylesheet" href="css/todos-trail.css">
 		<title>Todos</title>
 	</head>
 	<body>
@@ -12,7 +23,7 @@
 		
 			<div class="todos-add">
 			
-				<button class="todo-add_select-all" aria-label="Mark all items as done"></button>
+				<button class="todo-add_select-all" aria-label="Mark all items as done"><img src="img/select-all.png"></button>
 				
 				<input class="todo-add_input" placeholder="What needs to be done?" aria-label="todo addition input" />
 			
@@ -20,50 +31,63 @@
 			<div class="todos-list">
 			
 				<div class="todo-item">
-					<textarea class="todo-item_text">
-						HTML
-					</textarea>
-					
+			
 					<input type="checkbox" class="todo-item_ready-mark" aria-label="Mark as not done" />
+					<label class="todo-item_ready-mark-check" aria-hidden="true"></label>
 					
-					<button class="todo-item_remove" aria-label="Remove todo"></button>
+					<button class="todo-item_remove" aria-label="Remove todo"><img src="img/close.png"></button>
+					
+					<div contentEditable="true" class="todo-item_text">
+						HTML
+					</div>
 				</div>
 				
 				<div class="todo-item __ready">
-					<textarea class="todo-item_text">
-						CSS
-					</textarea>
 					
 					<input type="checkbox" checked="checked" class="todo-item_ready-mark" aria-label="Mark as not done" />
+					<label class="todo-item_ready-mark-check" aria-hidden="true"></label>
 					
-					<button class="todo-item_remove" aria-label="Remove todo"></button>
+					<button class="todo-item_remove" aria-label="Remove todo"><img src="img/close.png"></button>
+					
+					<div contentEditable="true" class="todo-item_text">
+						CSS
+					</div>
 				</div>
 				
 				<div class="todo-item">
-					<textarea class="todo-item_text">
+
+					<input type="checkbox" class="todo-item_ready-mark" aria-label="Mark as not done" />
+					<label class="todo-item_ready-mark-check" aria-hidden="true"></label>
+					
+					<button class="todo-item_remove" aria-label="Remove todo"><img src="img/close.png"></button>
+					
+					<div contentEditable="true" class="todo-item_text">
 						JS
-					</textarea>
-					
-					<input type="checkbox" class="todo-item_ready-mark" aria-label="Mark as not done" />
-					
-					<button class="todo-item_remove" aria-label="Remove todo"></button>
+					</div>
 				</div>
 				
 				<div class="todo-item">
-					<textarea class="todo-item_text">
-						JS tools
-					</textarea>
 					
 					<input type="checkbox" class="todo-item_ready-mark" aria-label="Mark as not done" />
+					<label class="todo-item_ready-mark-check" aria-hidden="true"></label>
 					
-					<button class="todo-item_remove" aria-label="Remove todo"></button>
+					<button class="todo-item_remove" aria-label="Remove todo"><img src="img/close.png"></button>
+					
+					<div contentEditable="true" class="todo-item_text">
+						JS tools
+					</div>
 				</div>
 				
 			</div>
 			
 			<div class="todos-actions-bar">
 			
-				<div class="todos-actions-bar_counter" aria-label="Number of the undone items" >3 items left</div>
+				<div class="todos-actions-bar_counter" aria-label="Number of the undone items">3 items left</div>
+				
+				<div class="todos-commands" aria-label="Number of the undone items">
+					<button class="todos-command" aria-label="Clear completed todos">Clear completed</button>
+				</div>
+				
 				<div class="todos-filters">
 					<button class="todo-filter __active" data-filter="all"
 							aria-label="Filter: show all items">
@@ -79,9 +103,16 @@
 					</button>
 				</div>
 				
-				<button class="todos-actions-bar_clear-completed" aria-label="Clear completed todos">Clear completed</button>
-				
 			</div>
+			
 		</div>
+		
+		<div class="todos-footer">
+		
+			<div class="todos-trail"></div>
+			<div class="todos-trail"></div>
+			
+		</div>
+	
 	</body>
 </html>

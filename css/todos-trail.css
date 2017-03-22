@@ -1,0 +1,17 @@
+.todos-trail {
+	margin: 0px auto;
+	background-color: #ffffff;
+	height: 5px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+	position: relative;
+}
+
+.todos-trail:first-of-type {
+	width: 554px;
+	z-index: 2;
+}
+
+.todos-trail:last-of-type {
+	width: 548px;
+	z-index: 1;
+}
