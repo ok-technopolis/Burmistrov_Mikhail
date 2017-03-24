@@ -15,7 +15,7 @@
 	border-top: 1px solid #e6e6e6;
 }
 
-.todo-item_ready-mark {
+.todo-item_ready-mark, .todo-item_ready-mark-check {
 	padding: 0;
 	background-color: transparent;
 	border: 1px solid #e6e6e6;
@@ -28,28 +28,22 @@
 	margin: 0;
 	margin-top: -18px;
 	outline: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
 	cursor: pointer;
+}
+
+.todo-item_ready-mark {
+	opacity: 0;
 	z-index: 2;
 }
 
-.todo-item_ready-mark:checked {
-	border-color: #88d2c4;
+.todo-item_ready-mark-check {
+	z-index: 1;
 }
 
 .todo-item_ready-mark:checked + .todo-item_ready-mark-check {
+	border-color: #88d2c4;
     background: url("../img/completed.png") no-repeat;
-	width: 20px;
-	height: 20px;
-	position: absolute;
-	top: 50%;
-	left: 20px;
-	margin-top: -8px;
-    display: inline-block;
-	cursor: pointer;
-	z-index: 1;
+	background-position: center center;
 }
 
 .todo-item_remove {
