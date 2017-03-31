@@ -2,16 +2,19 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="css/general.css">
-		<link rel="stylesheet" href="css/todos-title.css">
-		<link rel="stylesheet" href="css/todos-main.css">
-		<link rel="stylesheet" href="css/todos-add.css">
-		<link rel="stylesheet" href="css/todos-list.css">
-		<link rel="stylesheet" href="css/todo-item.css">
-		<link rel="stylesheet" href="css/todos-actions.css">
-		<link rel="stylesheet" href="css/todos-filters.css">
-		<link rel="stylesheet" href="css/todos-commands.css">
-		<link rel="stylesheet" href="css/todos-trail.css">
+		<link rel="stylesheet" href="styles/default.css">
+		<link rel="stylesheet" href="styles/base/button/button.css">
+		<link rel="stylesheet" href="styles/base/checkbox/checkbox.css">
+		<link rel="stylesheet" href="styles/base/input/input.css">
+		<link rel="stylesheet" href="styles/project/todos/todos-title/todos-title.css">
+		<link rel="stylesheet" href="styles/project/todos/todos-main/todos-main.css">
+		<link rel="stylesheet" href="styles/project/todos/todos-add/todos-add.css">
+		<link rel="stylesheet" href="styles/project/todos/todos-list/todos-list.css">
+		<link rel="stylesheet" href="styles/project/todos/todo-item/todo-item.css">
+		<link rel="stylesheet" href="styles/project/todos/todos-actions/todos-actions.css">
+		<link rel="stylesheet" href="styles/project/todos/todos-filters/todos-filters.css">
+		<link rel="stylesheet" href="styles/project/todos/todos-commands/todos-commands.css">
+		<link rel="stylesheet" href="styles/project/todos/todos-trail/todos-trail.css">
 		<title>Todos</title>
 	</head>
 	<body>
@@ -22,57 +25,57 @@
 		
 			<div class="todos-add">
 			
-				<button class="todo-add_select-all" aria-label="Mark all items as done"></button>
+				<button class="button todo-add_select-all" aria-label="Mark all items as done"></button>
 				
-				<input class="todo-add_input" placeholder="What needs to be done?" aria-label="todo addition input" />
+				<input class="input todo-add_input" placeholder="What needs to be done?" aria-label="todo addition input" />
 			
 			</div>
 			<div class="todos-list">
 			
 				<div class="todo-item">
 			
-					<input type="checkbox" class="todo-item_ready-mark" aria-label="Mark as not done" />
-					<div class="todo-item_ready-mark-check" aria-hidden="true"></div>
+					<input type="checkbox" class="checkbox todo-item_ready-mark" aria-label="Mark as not done" />
+					<div class="checkbox-checkmark" aria-hidden="true"></div>
 					
-					<button class="todo-item_remove" aria-label="Remove todo"></button>
+					<button class="button todo-item_remove" aria-label="Remove todo"></button>
 					
-					<div contentEditable="true" class="todo-item_text">
+					<div contentEditable="true" class="input todo-item_text">
 						HTML
 					</div>
 				</div>
 				
 				<div class="todo-item __ready">
 					
-					<input type="checkbox" checked="checked" class="todo-item_ready-mark" aria-label="Mark as not done" />
-					<div class="todo-item_ready-mark-check" aria-hidden="true"></div>
+					<input type="checkbox" checked="checked" class="checkbox todo-item_ready-mark" aria-label="Mark as not done" />
+					<div class="checkbox-checkmark" aria-hidden="true"></div>
 					
-					<button class="todo-item_remove" aria-label="Remove todo"></button>
+					<button class="button todo-item_remove" aria-label="Remove todo"></button>
 					
-					<div contentEditable="true" class="todo-item_text">
+					<div contentEditable="true" class="input todo-item_text">
 						CSS
 					</div>
 				</div>
 				
 				<div class="todo-item">
 
-					<input type="checkbox" class="todo-item_ready-mark" aria-label="Mark as not done" />
-					<div class="todo-item_ready-mark-check" aria-hidden="true"></div>
+					<input type="checkbox" class="checkbox todo-item_ready-mark" aria-label="Mark as not done" />
+					<div class="checkbox-checkmark" aria-hidden="true"></div>
 					
-					<button class="todo-item_remove" aria-label="Remove todo"></button>
+					<button class="button todo-item_remove" aria-label="Remove todo"></button>
 					
-					<div contentEditable="true" class="todo-item_text">
+					<div contentEditable="true" class="input todo-item_text">
 						JS
 					</div>
 				</div>
 				
 				<div class="todo-item">
 					
-					<input type="checkbox" class="todo-item_ready-mark" aria-label="Mark as not done" />
-					<div class="todo-item_ready-mark-check" aria-hidden="true"></div>
+					<input type="checkbox" class="checkbox todo-item_ready-mark" aria-label="Mark as not done" />
+					<div class="checkbox-checkmark" aria-hidden="true"></div>
 					
-					<button class="todo-item_remove" aria-label="Remove todo"></button>
+					<button class="button todo-item_remove" aria-label="Remove todo"></button>
 					
-					<div contentEditable="true" class="todo-item_text">
+					<div contentEditable="true" class="input todo-item_text">
 						JS tools
 					</div>
 				</div>
@@ -84,19 +87,19 @@
 				<div class="todos-actions-bar_counter" aria-label="Number of the undone items">3 items left</div>
 				
 				<div class="todos-commands" aria-label="Number of the undone items">
-					<button class="todos-command" aria-label="Clear completed todos">Clear completed</button>
+					<button class="button todos-command" aria-label="Clear completed todos">Clear completed</button>
 				</div>
 				
 				<div class="todos-filters">
-					<button class="todo-filter __active" data-filter="all"
+					<button class="button todo-filter __active" data-filter="all"
 							aria-label="Filter: show all items">
 						All
 					</button>
-					<button class="todo-filter" data-filter="undone"
+					<button class="button todo-filter" data-filter="undone"
 							aria-label="Filter: show undone items">
 						Active
 					</button>
-					<button class="todo-filter" data-filter="done"
+					<button class="button todo-filter" data-filter="done"
 							aria-label="Filter: show done items">
 						Completed
 					</button>

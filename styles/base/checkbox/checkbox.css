@@ -1,0 +1,28 @@
+.checkbox, 
+.checkbox-checkmark {
+	padding: 0;
+	background-color: transparent;
+	border: 1px solid #e6e6e6;
+	border-radius: 50%;
+	position: absolute;
+	width: 36px;
+	height: 36px;
+	margin: 0;
+	outline: none;
+	cursor: pointer;
+}
+
+.checkbox {
+	opacity: 0;
+	z-index: 2;
+}
+
+.checkbox-checkmark {
+	z-index: 1;
+}
+
+.checkbox:checked + .checkbox-checkmark {
+	border-color: #88d2c4;
+    background: url("../../../img/completed.png") no-repeat;
+	background-position: center center;
+}
