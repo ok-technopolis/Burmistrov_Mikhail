@@ -1,6 +1,5 @@
 .todos-add {
-	padding: 0;
-	min-height: 64px;
+	padding: 1.1em;
 	position: relative;
 }
 
@@ -8,19 +7,11 @@
 	background: url("../../../../img/select-all.png") no-repeat;
 	width: 24px;
 	height: 12px;
-	padding: 0;
-	position: absolute;
-	left: 20px;
-	top: 53%;
-	transform: translateY(-50%);
 }
 
 .todo-add_input {
-	width: 480px;
+	width: 85%;
 	font-style: italic;
 	font-size: 14pt;
-	position: absolute;
-	left: 60px;
-	top: 50%;
-	transform: translateY(-50%);
+	padding-left: 0.5em;
 }
