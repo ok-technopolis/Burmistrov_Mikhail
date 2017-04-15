@@ -1,10 +1,14 @@
+@import "../../../config/mixins/clearfix";
+
 .todos-add {
-	padding: 1.1em;
+	padding: 1.2em;
 	position: relative;
+	
+	@include clearfix();
 }
 
 .todo-add_select-all {
-	background: url("../../../../img/select-all.png") no-repeat;
+	background: url("../img/select-all.png") no-repeat;
 	width: 24px;
 	height: 12px;
 }

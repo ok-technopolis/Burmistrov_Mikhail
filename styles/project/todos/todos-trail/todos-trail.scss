@@ -1,3 +1,5 @@
+@import "./config/globals";
+
 .todos-trail {
 	margin: 0px auto;
 	background-color: #ffffff;
@@ -7,11 +9,11 @@
 }
 
 .todos-trail:first-of-type {
-	width: 554px;
+	width: $todos-main-width - 6px;
 	z-index: 2;
 }
 
 .todos-trail:last-of-type {
-	width: 548px;
+	width: $todos-main-width - 12px;
 	z-index: 1;
 }

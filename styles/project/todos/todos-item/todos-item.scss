@@ -1,5 +1,8 @@
+@import "../../../config/mixins/clearfix";
+
 .todo-item {
-	padding: .8em;
+	padding: 0 .8em;
+	min-height: 64px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	border-bottom: 1px solid #e6e6e6;
 	color: #707070;
@@ -7,16 +10,12 @@
 	
 	display: flex;
 	align-items: center;
+	
+	@include clearfix();
 	}
 	
 	.todo-item:first-of-type {
 		border-top: 1px solid #e6e6e6;
-		}
-
-	.todo-item:after {
-		content: '';
-		display: table;
-		clear: both;
 		}
 	
 	.todo-item:hover {
@@ -28,11 +27,11 @@
 		}
 
 	.todo-item_remove {
-		background: url("../../../../img/close.png") no-repeat;
+		background: url("../img/close.png") no-repeat;
 		width: 18px;
 		height: 18px;
 		padding: 0;
-		padding-bottom: 5%;
+		margin-bottom: 24px;
 		opacity: 0;
 		float: right;
 		
