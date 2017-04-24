@@ -1,7 +1,7 @@
 {
-  "name": "preprocessor-stub",
+  "name": "todo-app",
   "version": "0.0.1",
-  "description": "Stub for setting up preprocessor",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
