@@ -1,9 +1,11 @@
+@import "../../config/globals";
 @import "../../../config/mixins/clearfix";
+
 
 .todo-item {
 	padding: 0 .8em;
 	min-height: 64px;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: $font-main;
 	border-bottom: 1px solid #e6e6e6;
 	color: #707070;
 	position: relative;
@@ -27,7 +29,7 @@
 		}
 
 	.todo-item_remove {
-		background: url("../img/close.png") no-repeat;
+		background: url("../../../images/close.png") no-repeat;
 		width: 18px;
 		height: 18px;
 		padding: 0;
