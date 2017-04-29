@@ -1,3 +1,9 @@
+@import "../../config/globals";
+
+
+$checkbox-size: 36px;
+$c-checkbox-active: #88d2c4;
+
 .input-checkbox {
 	position: relative;
 	height: 36px;
@@ -5,26 +11,20 @@
 	}
 	
 	.input-checkbox_target {
+	    @include absolute-full();
 		opacity: 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
 		z-index: 1;
 		cursor: pointer;
 		}
-		
+
 		.input-checkbox_target:checked ~ .input-checkbox_visual {
-			border-color: #88d2c4;
+			border-color: $c-checkbox-active;
 			background: url("../../../images/completed.png") no-repeat;
 			background-position: center center;
 			}
 
 	.input-checkbox_visual {		
-		position: absolute;
-		width: 100%;
-		height: 100%;
+		@include absolute-full();
 		background-color: transparent;
 		border: 1px solid #e6e6e6;
 		border-radius: 50%;
