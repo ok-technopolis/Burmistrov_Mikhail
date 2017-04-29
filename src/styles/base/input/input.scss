@@ -1,5 +1,8 @@
+@import "../../config/globals";
+
+
 .input {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: $font-main;
 	border: none;
 	outline: none;
 }

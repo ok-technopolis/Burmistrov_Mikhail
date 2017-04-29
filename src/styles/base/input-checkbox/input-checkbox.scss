@@ -2,14 +2,15 @@
 
 
 $checkbox-size: 36px;
+
 $c-checkbox-active: #88d2c4;
 
 .input-checkbox {
 	position: relative;
-	height: 36px;
-	width: 36px;
+	height: $checkbox-size;
+	width: $checkbox-size;
 	}
-	
+
 	.input-checkbox_target {
 	    @include absolute-full();
 		opacity: 0;
@@ -26,7 +27,7 @@ $c-checkbox-active: #88d2c4;
 	.input-checkbox_visual {		
 		@include absolute-full();
 		background-color: transparent;
-		border: 1px solid #e6e6e6;
-		border-radius: 50%;
+		border: 1px solid $c-ultra-light;
+		border-radius: $checkbox-size / 2;
 		cursor: pointer;
 		}
