@@ -2,24 +2,22 @@
 
 
 .todos-actions-bar {
-	padding: 10px 12px;
+	padding: $offset $offset_3x;
 	border-top: 1px solid #e6e6e6;
 	font-family: $font-main;
+	text-align: center;
 	color: $c-gray;
-	font-size: 10pt;
+	font-size: $fs_little;
+    line-height: $lh_little;
 	overflow: hidden;
-	
-	display: flex;
 	
 	@include clearfix();
 	}
 
 	.todos-actions-bar_counter {
-		margin: auto;
-		max-width: 85px;
 		overflow: hidden;
 		white-space: nowrap;
 		float: left;
-		
-		order: 1;
+		padding: $offset_half 0;
+		margin: $offset_2x $offset_4x $offset_2x 0;
 		}
