@@ -215,7 +215,7 @@ body {
   clear: both;
 }
 
-.hover .todo-item .todo-item_remove {
+.hover .todo-item .todo-item_remove-action {
   opacity: 0;
   transition: opacity .3s;
 }
@@ -224,7 +224,7 @@ body {
   background-color: #fafafa;
 }
 
-.hover .todo-item:hover .todo-item_remove {
+.hover .todo-item:hover .todo-item_remove-action {
   opacity: 1;
 }
 
