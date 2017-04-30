@@ -5,7 +5,6 @@ $c-todo-item-hover: #fafafa;
 
 .todo-item {
 	padding: $offset_3x;
-	font-family: $font-main;
 	border-bottom: 1px solid $c-common-border;
 	color: $c-gray;
 	position: relative;
@@ -74,6 +73,7 @@ $c-todo-item-hover: #fafafa;
         .todo-item_text {
             padding: $offset $offset_3x;
             word-break: break-all;
+            font-family: $font-main;
             font-size: $fs_x-large;
             line-height: $lh_x-large;
             overflow: hidden;
