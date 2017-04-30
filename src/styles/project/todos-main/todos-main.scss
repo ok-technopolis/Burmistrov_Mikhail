@@ -1,10 +1,32 @@
 @import "./config/globals";
 
+
+$todos-main-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+
 .todos-main {     
 	margin: 0px auto;
-	background-color: #ffffff;
-	width: $todos-main-width;
-	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+	background-color: $c-todos-main-bg;
+	max-width: $todos-main-width;
+	box-shadow: $todos-main-shadow;
 	position: relative;
-	z-index: 3;
-}
+    }
+    .todos-main:before,
+    .todos-main:after {
+        position: absolute;
+        background: $c-white;
+        box-shadow: $todos-main-shadow;
+        top: 100%;
+        z-index: -1;
+        }
+    .todos-main:before {
+        content: '';
+        height: 8px;
+        left: 4px;
+        right: 4px;
+        }
+    .todos-main:after {
+        content: '';
+        height: 4px;
+        left: 2px;
+        right: 2px;
+        }
