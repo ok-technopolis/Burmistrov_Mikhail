@@ -20,8 +20,14 @@ $c-checkbox-active: #88d2c4;
 
 		.input-checkbox_target:checked ~ .input-checkbox_visual {
 			border-color: $c-checkbox-active;
-			background: url("../../../images/completed.png") no-repeat;
-			background-position: center center;
+
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url("../../../images/completed.png");
+            @include retinaMedia(){
+                background-size: 50% 50%;
+                background-image: url("../../../images/completed@2x.png");
+                }
 			}
 
 	.input-checkbox_visual {		
