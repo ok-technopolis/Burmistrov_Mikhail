@@ -14,6 +14,14 @@ $todos-add-height: 64px;
         float: left;
         margin: $offset_5x 0 0 $offset_4x;
         }
+        .todos-main .todo-add_select-all-action {
+            visibility: hidden;
+            }
+            .todos-main.__has-todos .todo-add_select-all-action {
+                visibility: visible;
+                opacity: 1;
+                }
+
         .todo-add_select-all-action .action_visual {
             width: 24px;
             height: 12px;
