@@ -239,13 +239,18 @@ body {
   clear: both;
 }
 
+.hover .todo-item {
+  transition: background-color 0.3s;
+}
+
 .hover .todo-item .todo-item_remove-action {
   opacity: 0;
-  transition: opacity .3s;
+  transition: opacity 0.3s;
 }
 
 .hover .todo-item:hover {
   background-color: #fafafa;
+  transition: background-color 0.3s;
 }
 
 .hover .todo-item:hover .todo-item_remove-action {

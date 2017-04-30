@@ -2,6 +2,7 @@
 
 
 $c-todo-item-hover: #fafafa;
+$todo-item-animation-time: .3s;
 
 .todo-item {
 	padding: $offset_3x;
@@ -17,8 +18,9 @@ $c-todo-item-hover: #fafafa;
 	@include not-hovered() {
         .todo-item_remove-action {
             opacity: 0;
-            transition: opacity .3s;
+            transition: opacity $todo-item-animation-time;
             }
+        transition: background-color $todo-item-animation-time;
         }
     @include hover() {
         background-color: $c-todo-item-hover;
@@ -26,6 +28,7 @@ $c-todo-item-hover: #fafafa;
         .todo-item_remove-action {
             opacity: 1;
             }
+        transition: background-color $todo-item-animation-time;
         }
 	}
 	
