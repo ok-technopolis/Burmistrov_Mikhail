@@ -40,6 +40,7 @@ $todos-add-height: 64px;
             height: $todos-add-height;
             font-size: $fs_large;
             padding: $offset_4x;
+            color: $c-gray;
 
             @include placeholder() {
                 font-style: italic;
