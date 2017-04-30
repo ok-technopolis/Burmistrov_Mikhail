@@ -2,12 +2,10 @@
 @import "../../config/mixins/clearfix";
 
 
-$todo-item-height: 64px;
 $c-todo-item-hover: #fafafa;
 
 .todo-item {
 	padding: $offset_3x;
-	min-height: $todo-item-height;
 	font-family: $font-main;
 	border-bottom: 1px solid $c-common-border;
 	color: $c-gray;
@@ -41,7 +39,7 @@ $c-todo-item-hover: #fafafa;
 		width: 18px;
 		height: 18px;
 		margin-top: $offset_3x;
-        margin-bottom: $offset_6x;
+        margin-bottom: $offset_3x;
 		float: right;
 		
 		order: 50;
@@ -75,8 +73,10 @@ $c-todo-item-hover: #fafafa;
         order: 10;
         }
         .todo-item_text {
-            padding: 0 $offset_3x;
+            padding: $offset $offset_3x;
             word-break: break-all;
+            font-size: $fs_x-large;
+            line-height: $lh_x-large;
             overflow: hidden;
             }
             .todo-item.__ready .todo-item_text {
