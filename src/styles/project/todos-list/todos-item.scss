@@ -74,6 +74,8 @@ $todo-item-animation-time: .3s;
         order: 10;
         }
         .todo-item_text {
+            outline: none;
+            border: none;
             padding: $offset $offset_3x;
             word-break: break-all;
             font-family: $font-main;
