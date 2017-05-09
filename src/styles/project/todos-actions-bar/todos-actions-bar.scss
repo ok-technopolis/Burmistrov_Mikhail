@@ -1,0 +1,23 @@
+@import "../../config/globals";
+
+
+.todos-actions-bar {
+	padding: $offset $offset_3x;
+	border-top: 1px solid #e6e6e6;
+	font-family: $font-main;
+	text-align: center;
+	color: $c-gray;
+	font-size: $fs_little;
+    line-height: $lh_little;
+	overflow: hidden;
+	
+	@include clearfix();
+	}
+
+	.todos-actions-bar_counter {
+		overflow: hidden;
+		white-space: nowrap;
+		float: left;
+		padding: $offset_half 0;
+		margin: $offset_2x $offset_4x $offset_2x 0;
+		}

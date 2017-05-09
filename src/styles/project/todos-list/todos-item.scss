@@ -1,0 +1,90 @@
+@import "../../config/globals";
+
+
+$c-todo-item-hover: #fafafa;
+$todo-item-animation-time: .3s;
+
+.todo-item {
+	padding: $offset_3x;
+	border-bottom: 1px solid $c-common-border;
+	color: $c-gray;
+	position: relative;
+	
+	display: flex;
+	align-items: center;
+	
+	@include clearfix();
+
+	@include not-hovered() {
+        .todo-item_remove-action {
+            opacity: 0;
+            transition: opacity $todo-item-animation-time;
+            }
+        transition: background-color $todo-item-animation-time;
+        }
+    @include hover() {
+        background-color: $c-todo-item-hover;
+
+        .todo-item_remove-action {
+            opacity: 1;
+            }
+        transition: background-color $todo-item-animation-time;
+        }
+	}
+	
+	.todo-item:first-of-type {
+		border-top: 1px solid $c-common-border;
+		}
+
+	.todo-item_remove-action {
+		width: 18px;
+		height: 18px;
+		margin-top: $offset_3x;
+        margin-bottom: $offset_3x;
+		float: right;
+		
+		order: 50;
+		align-self: flex-end;
+		}
+
+        .todo-item_remove-action .action_visual {
+            width: 18px;
+            height: 18px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url("../../../images/close.png");
+            @include retinaMedia(){
+                background-size: 100% 100%;
+                background-image: url("../../../images/close@2x.png");
+                }
+            }
+
+
+	.todo-item_ready-mark {
+		float: left;
+		
+		order: 1;
+		align-self: center;
+		}
+
+    .todo-item_text-w {
+        overflow: hidden;
+
+        flex: 1 0;
+        order: 10;
+        }
+        .todo-item_text {
+            outline: none;
+            border: none;
+            padding: $offset $offset_3x;
+            word-break: break-all;
+            font-family: $font-main;
+            font-size: $fs_x-large;
+            line-height: $lh_x-large;
+            overflow: hidden;
+            }
+            .todo-item.__ready .todo-item_text {
+                color: $c-ultra-light;
+                text-decoration: line-through;
+            }
+

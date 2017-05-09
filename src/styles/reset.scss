@@ -1,0 +1,19 @@
+/* Reset.css
+---------------------------------------------------------------------------------- */
+
+@import "config/globals";
+
+input, button {
+    font-family: $font-main;
+    border: none;
+    outline: none;
+    }
+
+button {
+    background-color: transparent;
+    color: $c-gray;
+    cursor: pointer;
+    }
+
+/* /Reset.css
+---------------------------------------------------------------------------------- */

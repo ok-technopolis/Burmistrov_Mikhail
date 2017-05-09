@@ -1,0 +1,10 @@
+@import "../../config/globals";
+
+
+.todos-filters {
+	overflow: hidden;
+	white-space: nowrap;
+	text-align: center;
+	margin: $offset_2x 0;
+	display: inline-block;
+    }

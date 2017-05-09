@@ -1,0 +1,59 @@
+@import "../../config/mixins/clearfix";
+
+
+$todos-add-height: 64px;
+
+.todos-add {
+	height: $todos-add-height;
+	
+	@include clearfix();
+    }
+    .todo-add_select-all-action {
+        width: 24px;
+        height: 24px;
+        float: left;
+        margin: $offset_5x 0 0 $offset_4x;
+        }
+        .todos-main .todo-add_select-all-action {
+            visibility: hidden;
+            }
+            .todos-main.__has-todos .todo-add_select-all-action {
+                visibility: visible;
+                opacity: 1;
+                }
+
+        .todo-add_select-all-action .action_visual {
+            width: 24px;
+            height: 12px;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            margin-top: -6px;
+
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-image: url("../../../images/select-all.png");
+            @include retinaMedia(){
+                background-size: 100% 100%;
+                background-image: url("../../../images/select-all@2x.png");
+                }
+            }
+
+     .todo-add_input-w {
+        overflow: hidden;
+        }
+
+        .todo-add_input {
+            width: 100%;
+            box-sizing: border-box;
+            height: $todos-add-height;
+            font-family: $font-main;
+            font-size: $fs_large;
+            padding: $offset_4x;
+            color: $c-gray;
+
+            @include placeholder() {
+                font-style: italic;
+                color: $c-ultra-light;
+                }
+            }

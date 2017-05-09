@@ -1,0 +1,17 @@
+@import "../../config/globals";
+
+
+.todos-commands {
+	float: right;
+    }
+
+    .todos-command {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        font-size: $fs_little;
+        line-height: $lh_little;
+        margin: $offset_2x 0 $offset_2x $offset_4x;
+        padding: $offset_half 0;
+        }
