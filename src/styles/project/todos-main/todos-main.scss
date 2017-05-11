@@ -4,11 +4,11 @@
 $todos-main-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 
 .todos-main {     
-	margin: 0px auto;
-	background-color: $c-todos-main-bg;
-	max-width: $todos-main-width;
-	box-shadow: $todos-main-shadow;
-	position: relative;
+    margin: 0px auto;
+    background-color: $c-todos-main-bg;
+    max-width: $todos-main-width;
+    box-shadow: $todos-main-shadow;
+    position: relative;
     }
     .todos-main:before,
     .todos-main:after {

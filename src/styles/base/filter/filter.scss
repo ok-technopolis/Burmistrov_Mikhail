@@ -3,9 +3,9 @@
 
 .filter {
     font-family: $font-main;
-	}
-	.filter.__active{
-		padding: $offset_half $offset_3x;
-		border: 1px solid $c-micro-elements;
-		border-radius: 2px;
-	    }
+    }
+    .filter.__active{
+        padding: $offset_half $offset_3x;
+        border: 1px solid $c-micro-elements;
+        border-radius: 2px;
+        }

@@ -4,9 +4,9 @@
 $todos-add-height: 64px;
 
 .todos-add {
-	height: $todos-add-height;
-	
-	@include clearfix();
+    height: $todos-add-height;
+
+    @include clearfix();
     }
     .todo-add_select-all-action {
         width: 24px;

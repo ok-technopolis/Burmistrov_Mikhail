@@ -6,22 +6,22 @@ $checkbox-size: 36px;
 $c-checkbox-active: #88d2c4;
 
 .input-checkbox {
-	position: relative;
-	height: $checkbox-size;
-	width: $checkbox-size;
-	margin: 0;
-	}
+    position: relative;
+    height: $checkbox-size;
+    width: $checkbox-size;
+    margin: 0;
+    }
 
-	.input-checkbox_target {
-	    @include absolute-full();
-		margin: 0;
-		opacity: 0;
-		z-index: 1;
-		cursor: pointer;
-		}
+    .input-checkbox_target {
+        @include absolute-full();
+        margin: 0;
+        opacity: 0;
+        z-index: 1;
+        cursor: pointer;
+        }
 
-		.input-checkbox_target:checked ~ .input-checkbox_visual {
-			border-color: $c-checkbox-active;
+        .input-checkbox_target:checked ~ .input-checkbox_visual {
+            border-color: $c-checkbox-active;
 
             background-repeat: no-repeat;
             background-position: center center;
@@ -30,13 +30,13 @@ $c-checkbox-active: #88d2c4;
                 background-size: 50% 50%;
                 background-image: url("../../../images/completed@2x.png");
                 }
-			}
+            }
 
-	.input-checkbox_visual {		
-		@include absolute-full();
-		box-sizing: border-box;
-		background-color: transparent;
-		border: 1px solid $c-ultra-light;
-		border-radius: $checkbox-size / 2;
-		cursor: pointer;
-		}
+    .input-checkbox_visual {
+        @include absolute-full();
+        box-sizing: border-box;
+        background-color: transparent;
+        border: 1px solid $c-ultra-light;
+        border-radius: $checkbox-size / 2;
+        cursor: pointer;
+        }
