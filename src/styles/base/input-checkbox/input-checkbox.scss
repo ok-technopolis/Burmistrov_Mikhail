@@ -4,6 +4,7 @@
 $checkbox-size: 36px;
 
 $c-checkbox-active: #88d2c4;
+$c-checkbox-animation-time: .2s;
 
 .input-checkbox {
     position: relative;
@@ -22,14 +23,6 @@ $c-checkbox-active: #88d2c4;
 
         .input-checkbox_target:checked ~ .input-checkbox_visual {
             border-color: $c-checkbox-active;
-
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-image: url("../../../images/completed.png");
-            @include retinaMedia(){
-                background-size: 50% 50%;
-                background-image: url("../../../images/completed@2x.png");
-                }
             }
 
     .input-checkbox_visual {
@@ -39,4 +32,28 @@ $c-checkbox-active: #88d2c4;
         border: 1px solid $c-ultra-light;
         border-radius: $checkbox-size / 2;
         cursor: pointer;
+        transition: border-color $c-checkbox-animation-time;
         }
+
+        .input-checkbox_visual_icon {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            top: 50%;
+            left: 50%;
+            margin: -10px -10px;
+            opacity: 0;
+            transition: opacity $c-checkbox-animation-time;
+
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url("../../../images/completed.png");
+            @include retinaMedia(){
+                background-size: 20px 20px;
+                background-image: url("../../../images/completed@2x.png");
+                }
+            }
+            .input-checkbox_target:checked ~ .input-checkbox_visual .input-checkbox_visual_icon {
+                opacity: 1;
+                }
+

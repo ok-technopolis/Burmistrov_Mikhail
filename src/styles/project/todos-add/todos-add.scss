@@ -34,7 +34,7 @@ $todos-add-height: 64px;
             background-repeat: no-repeat;
             background-image: url("../../../images/select-all.png");
             @include retinaMedia(){
-                background-size: 100% 100%;
+                background-size: 24px 12px;
                 background-image: url("../../../images/select-all@2x.png");
                 }
             }
