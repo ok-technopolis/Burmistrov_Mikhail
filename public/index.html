@@ -1,139 +1,78 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="dist/styles/default.css">
-        <title>Todos</title>
-    </head>
-    <body class="hover">
-        <div class="todos-header">
-            <h1 class="todos-title">todos</h1>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="dist/styles/default.css">
+    <title>Todos</title>
+    <script src="dist/scripts/bundle.js"></script>
+</head>
+<script type="text/html" id="todoItemTemplate">
+    <div class="todo-item">
+
+        <div class="input-checkbox todo-item_ready-mark">
+            <input type="checkbox"
+                   class="input-checkbox_target js-todo-item_ready-mark"
+                   aria-label="Mark as not done" />
+            <div class="input-checkbox_visual" aria-hidden="true">
+                <div class="input-checkbox_visual_icon"></div>
+            </div>
         </div>
-        <div class="todos-main __has-todos">
 
-            <div class="todos-add">
-                <div class="action todo-add_select-all-action">
-                    <div class="action_visual"></div>
-                    <button class="action_target" aria-label="Mark all items as done"></button>
-                </div>
-
-                <div class="todo-add_input-w">
-                    <input class="todo-add_input" placeholder="What needs to be done?" aria-label="todo addition input" />
-                </div>
-
-            </div>
-            <div class="todos-list">
-
-                <div class="todo-item">
-
-                    <div class="input-checkbox todo-item_ready-mark">
-                        <input type="checkbox" class="input-checkbox_target" aria-label="Mark as not done" />
-                        <div class="input-checkbox_visual" aria-hidden="true">
-                            <div class="input-checkbox_visual_icon"></div>
-                        </div>
-                    </div>
-
-                    <div class="action todo-item_remove-action">
-                        <div class="action_visual"></div>
-                        <button class="action_target" aria-label="Remove todo"></button>
-                    </div>
-
-                    <div class="todo-item_text-w">
-                        <div contentEditable="true" class="todo-item_text">
-                            HTML
-                        </div>
-                    </div>
-                </div>
-
-                <div class="todo-item __ready">
-
-                    <div class="input-checkbox todo-item_ready-mark">
-                        <input type="checkbox" checked="checked" class="input-checkbox_target" aria-label="Mark as not done" />
-                        <div class="input-checkbox_visual" aria-hidden="true">
-                            <div class="input-checkbox_visual_icon"></div>
-                        </div>
-                    </div>
-
-                    <div class="action todo-item_remove-action">
-                        <div class="action_visual"></div>
-                        <button class="action_target" aria-label="Remove todo"></button>
-                    </div>
-                    <div class="todo-item_text-w">
-                        <div contentEditable="true" class="todo-item_text">
-                            CSS
-                        </div>
-                    </div>
-                </div>
-
-                <div class="todo-item">
-
-                    <div class="input-checkbox todo-item_ready-mark">
-                        <input type="checkbox" class="input-checkbox_target" aria-label="Mark as not done" />
-                        <div class="input-checkbox_visual" aria-hidden="true">
-                            <div class="input-checkbox_visual_icon"></div>
-                        </div>
-                    </div>
-
-                    <div class="action todo-item_remove-action">
-                        <div class="action_visual"></div>
-                        <button class="action_target" aria-label="Remove todo"></button>
-                    </div>
-
-                    <div class="todo-item_text-w">
-                        <div contentEditable="true" class="todo-item_text">
-                            JS
-                        </div>
-                    </div>
-                </div>
-
-                <div class="todo-item">
-
-                    <div class="input-checkbox todo-item_ready-mark">
-                        <input type="checkbox" class="input-checkbox_target" aria-label="Mark as not done" />
-                        <div class="input-checkbox_visual" aria-hidden="true">
-                            <div class="input-checkbox_visual_icon"></div>
-                        </div>
-                    </div>
-
-                    <div class="action todo-item_remove-action">
-                        <div class="action_visual"></div>
-                        <button class="action_target" aria-label="Remove todo"></button>
-                    </div>
-
-                    <div class="todo-item_text-w">
-                        <div contentEditable="true" class="todo-item_text">
-                            JS tools
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="todos-actions-bar">
-
-                <div class="todos-actions-bar_counter" aria-label="Number of the undone items">3 items left</div>
-
-                <div class="todos-commands" aria-label="Number of the undone items">
-                    <button class="todos-command" aria-label="Clear completed todos">Clear completed</button>
-                </div>
-
-                <div class="todos-filters">
-                    <button class="filter __active" data-filter="all"
-                            aria-label="Filter: show all items">
-                        All
-                    </button>
-                    <button class="filter" data-filter="undone"
-                            aria-label="Filter: show undone items">
-                        Active
-                    </button>
-                    <button class="filter" data-filter="done"
-                            aria-label="Filter: show done items">
-                        Completed
-                    </button>
-                </div>
-
-            </div>
-
+        <div class="action todo-item_remove-action">
+            <div class="action_visual"></div>
+            <button class="action_target js-todo-item_remove-action" aria-label="Remove todo"></button>
         </div>
-    </body>
+
+        <div class="todo-item_text-w">
+            <div contentEditable="true" class="todo-item_text js-todo-item_text"></div>
+        </div>
+    </div>
+</script>
+<body class="hover">
+<div class="todos-header">
+    <h1 class="todos-title">todos</h1>
+</div>
+<div class="todos-main js-todos-main">
+
+    <div class="todos-add">
+        <div class="action todo-add_select-all-action">
+            <div class="action_visual"></div>
+            <button class="action_target js-todos-select-all" aria-label="Mark all items as done"></button>
+        </div>
+
+        <div class="todo-add_input-w">
+            <input class="todo-add_input js-todos-todo-input" placeholder="What needs to be done?" aria-label="todo addition input" />
+        </div>
+
+    </div>
+
+    <div class="todos-list js-todos-list"></div>
+
+    <div class="todos-actions-bar">
+
+        <div class="todos-actions-bar_counter js-todos-actions-bar_counter" aria-label="Number of the undone items"></div>
+
+        <div class="todos-commands" aria-label="Number of the undone items">
+            <button class="todos-command js-todos-actions-bar_clear-completed" aria-label="Clear completed todos">Clear completed</button>
+        </div>
+
+        <div class="todos-filters js-todos-actions-bar_filter">
+            <button class="filter __active" data-filter="all"
+                    aria-label="Filter: show all items">
+                All
+            </button>
+            <button class="filter" data-filter="undone"
+                    aria-label="Filter: show undone items">
+                Active
+            </button>
+            <button class="filter" data-filter="done"
+                    aria-label="Filter: show done items">
+                Completed
+            </button>
+        </div>
+
+    </div>
+
+</div>
+</body>
 </html>
