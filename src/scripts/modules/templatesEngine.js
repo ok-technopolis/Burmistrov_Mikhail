@@ -13,7 +13,7 @@ var templatesEngine = {
     todoItem: function (data) {
         var root = getTemplateRootNode('todoItemTemplate');
 
-        var markReady = root.querySelector('.js-todo-item_mark-ready');
+        var markReady = root.querySelector('.js-todo-item_ready-mark');
         var removeAction = root.querySelector('.js-todo-item_remove-action');
         var text = root.querySelector('.js-todo-item_text');
 

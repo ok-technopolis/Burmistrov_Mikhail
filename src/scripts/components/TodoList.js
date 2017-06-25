@@ -136,14 +136,14 @@ todoListConstructorPrototype.filterShowedItems = function (filterId) {
             case 'all':
                 item.show();
                 break;
-            case 'ready':
+            case 'done':
                 if (item.model.isReady) {
                     item.show();
                 } else {
                     item.hide();
                 }
                 break;
-            case 'unready':
+            case 'undone':
                 if (!item.model.isReady) {
                     item.show();
                 } else {
