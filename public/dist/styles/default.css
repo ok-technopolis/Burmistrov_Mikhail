@@ -283,6 +283,18 @@ body {
   opacity: 1;
 }
 
+.todo-item.__hide {
+  display: none;
+}
+
+.todo-item.__hide:first-child ~ .todo-item {
+  border-top: 1px solid #e6e6e6;
+}
+
+.todo-item.__hide:first-child ~ .todo-item:not(.__hide) ~ .todo-item {
+  border-top: 0;
+}
+
 .todo-item:first-of-type {
   border-top: 1px solid #e6e6e6;
 }
